@@ -1,0 +1,696 @@
+/**
+  * $ADMIN CSS
+  *
+  * Defines all of the styles used in
+  * the plugin's ADMIN dashboard.
+  *
+  * @since   1.4.2
+  * @version 1.0.0          Completely re-written to latest CSS standards. Removed outdated styles.
+  * 1.  $NORMALIZE
+  * 2.  $CLASSES
+  * 3.  $TYPE
+  * 4.  $AJAX
+  * 5.  $LAYOUT/STRUCTURE
+  * 6.  $FORM FIELDS
+  * 7.  $JQUERY UI
+  * 8.  $HEADER FOOTER COLOR
+  * 9.  $NEED SUPPORT?
+  * 10. $MEDIA QUERIES
+  * 11. $MEDIA QUERIES & VIEWPORT TYPOGRAPHY
+*/
+
+/*------------------------------------*\
+  * 1. $NORMALIZE
+\*------------------------------------*/
+*,
+*:before,
+*::after {
+  box-sizing:border-box
+}
+a:focus {
+  box-shadow: none !important
+}
+img {
+  max-width:100%
+}
+/*------------------------------------*\
+  * 2. $CLASSES
+\*------------------------------------*/
+.aligncenter {
+  text-align:center !important
+}
+.last {
+  margin-right:0 !important
+}
+.first {
+  margin-left:0 !important
+}
+.left {
+  float:left
+}
+.right{
+  float:right
+}
+.disabled {
+  opacity: .6
+}
+.hide {
+  display: none
+}
+.block {
+  display: block
+}
+.slidedown{
+  -webkit-transform: translateY(14px);
+  transform: translateY(14px);
+}
+.slideup{
+  -webkit-transform: translateY(-59px);
+  transform: translateY(-59px);
+}
+/*------------------------------------*\
+  * 3. $TYPE
+\*------------------------------------*/
+#udel_message {
+  background-color:#FDD;
+  padding:.313em;
+  font-weight:bold
+}
+p.submit {
+  float: none !important;
+  text-align:center;
+}
+p.dashicons-before.dashicons-warning::before {
+  font-family: "dashicons";
+  content: "\f534";
+  color: #9F6000 !important;
+  line-height: 1.2;
+  float: left;
+}
+#udtbp-ajax-message p {
+  color: #FFF;
+  font-size: 24px;
+}
+.notice.notice-warning.is-dismissible p {
+  color:#9F6000 !important;
+}
+.theme_name {
+  display: inline;
+  font-style: italic;
+  font-weight: bold;
+}
+#udt_wrap h1,
+#udt_wrap h3,
+#udt_wrap p:not(.description),
+#udtbp_form > td,
+#udtbp_form > p
+#udtbp_form > div,
+.form-table th,
+.form-wrap label {
+  color: #333;
+  font-family: "Open Sans",sans-serif;
+}
+#udt_wrap h3{
+  margin-bottom: 0
+}
+#udt_wrap h3 + p{
+  margin-top: 0
+}
+#udt_panel_mainmenu{
+  background-color: #1B538C;
+  display: block;
+  float: left;
+  position: relative;
+  margin: 0;
+  width: 100%;
+}
+#udt_panel_mainmenu li {
+  display: inline-block;
+  float: left;
+  font-family: "Open Sans",sans-serif;
+  font-size: 18px;
+  margin-bottom: 0;
+  width: 130px
+}
+#udt_panel_mainmenu li:first-of-type,
+#udt_panel_mainmenu li:nth-of-type(2),
+#udt_panel_mainmenu li:nth-of-type(3){
+  border-right: 1px solid #E7E7E7
+}
+#udt_panel_mainmenu li:hover,
+#udt_panel_mainmenu li.ui-tabs-active{
+  background-color: #008BDB;
+  transition: all 0.3s ease 0s;
+}
+#udt_panel_mainmenu a {
+  box-sizing: border-box;
+  color: #FFF;
+  display: inline-block;
+  outline: 0 none;
+  padding: 20px;
+  width: 130px;
+  text-align: center;
+  text-decoration:none;
+}
+#udt_panel_mainmenu a:active {
+  background: #DDD;
+  color:#000
+}
+.form-table th {
+  font-size: 15px;
+  text-align: right;
+  padding-top: 0;
+  vertical-align: middle;
+}
+/*------------------------------------*\
+  * 4. $AJAX
+\*------------------------------------*/
+#udtbp-ajax-message {
+  background-color: #090;
+  box-shadow: rgba(0, 0, 0, 0) 0px 0px 40px;
+  left: 0px;
+  line-height: 2;
+  padding: 14px;
+  position: fixed;
+  text-align: center;
+  top: 32px;
+  width: 100%;
+  z-index:9999;
+  transition: all 0.3s ease-in-out 0.3s;
+}
+#udtbp-ajax-saving {
+  display: none;
+  transition: background, box-shadow 0.3s;
+  position: fixed;
+  top: 30%;
+  left: 50%;
+  width: 110px;
+  height: 110px;
+  background: transparent;
+  z-index: 999999;
+}
+
+#udtbp-ajax-saving.success-animation {
+  background-color: #090;
+  box-shadow: rgba(0, 0, 0, 0) 0px 0px 40px;
+  opacity: 1;
+}
+#udtbp-ajax-saving.success-animation:before {
+  background: none;
+  font-family: 'dashicons';
+  speak: none;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  content: "\f147";
+  color: #FFF;
+  font-size: 22px;
+  line-height: 50px;
+}
+#udtbp-ajax-saving.et_loading:before,
+#udtbp-ajax-saving.success-animation img,
+
+#udtbp-ajax-message {
+  display: none;
+}
+#udtbp_theme_override.show
+#udtbp-ajax-message.show {
+  display: inline-block;
+}
+/*------------------------------------*\
+  * 5. $LAYOUT/STRUCTURE
+    * a. safari fix for font weight
+    * @example https://stackoverflow.com/questions/21278020/font-weight-turns-lighter-on-mac-safari
+\*------------------------------------*/
+.udt_yes_no_button,
+#udt_header_settings select,
+.wp-core-ui .button.save-button {
+  border-radius: 4px;
+}
+.udt_yes_no_button,
+#udt_header_settings select,
+.wp-core-ui .button.save-button,
+#udt_panel_mainmenu li:hover,
+#udt_panel_mainmenu li.ui-tabs-active,
+#udtbp-ajax-message,
+#udt_header_settings select option:hover  {
+  box-shadow:  inset 0 0 30px rgba(0,0,0, 0.25);
+}
+body#error-page #udtbp_header,
+body#error-page #udtbp_footer {
+  display: none !important;
+  visibility: hidden;
+}
+.box-content {
+  box-sizing: border-box;
+  display: inline-block;
+  padding: 0; /* 0 0 30px;*/
+  vertical-align: top;
+  width: 100%;
+}
+.notice.notice-warning.is-dismissible {
+  background: #FEEFB3;
+}
+.udt_yes_no_button {
+  border-radius: 4px;
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: all 0.3s ease 0s;
+  width: 255px;
+}
+.udt_yes_no_button span.udt_button_slider {
+  background: #fff none repeat scroll 0 0;
+  border-radius: 3px;
+  box-shadow: rgba(0, 139, 219, 0.247059) 0px 0px 60px;
+  height: 30px;
+  margin: 5px 0;
+  position: absolute;
+  transition: all 0.3s ease 0s;
+  width: 50%;
+}
+.udt_yes_no_button.udt_on_state {
+  background-color: #008BDB;
+}
+.udt_yes_no_button.udt_off_state {
+  background-color: #f1f5f9;
+}
+.udt_yes_no_button.udt_on_state span.udt_button_slider {
+  left: 50%;
+  margin-left: -5px;
+}
+.udt_yes_no_button.udt_off_state span.udt_button_slider {
+  left: 5px;
+}
+span.udt_value_text {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  float: left;
+  font-weight: 600;
+  -webkit-font-smoothing: subpixel-antialiased; /* a */
+  padding: 11px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: all 0.3s ease 0s;
+  width: 50%;
+}
+span.udt_value_text.udt_on_value,
+span.udt_value_text.udt_off_value {
+  margin-left: 0;
+  margin-right: 0;
+}
+span.udt_value_text.udt_on_value {
+  color: #fff;
+}
+span.udt_value_text.udt_off_value {
+  color: #8e969e;
+}
+.field_prompt {
+  color:  #767676;
+  font-style: italic;
+}
+/*------------------------------------*\
+  * 6. $FORM FIELDS
+\*------------------------------------*/
+.box-content input {
+  float: left;
+  vertical-align: top;
+}
+.box-content input[type="checkbox"] {
+  display: none
+}
+.box-content label{
+  padding-right:1.25em;
+}
+#udt_header_settings label {
+  display: inline-block;
+  position:relative
+}
+#udt_header_settings label::after {
+  content: "\f346";
+  font-size: 30px;
+  font-family: "dashicons";
+  color: #FFF;
+  right: 17px;
+  top: 15%; /*50%;*/
+  -webkit-transform: rotate(0);
+  transform: rotate(0);
+  height: 40px;
+  padding: 0 5px;
+  position: absolute;
+  pointer-events: none;
+  border-left: 1px solid #CCC;
+  border-right: none;
+}
+#udt_header_settings label.focus::after{
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+  border-right: 1px solid #CCC;
+  border-left: none;
+}
+/* @example http://tympanus.net/Development/SelectInspiration/ */
+#udt_header_settings select {
+  cursor: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  display: block;
+  width: 400px;
+  height: 50px !important;
+  float: left;
+  margin: 3px 0px;
+  padding: 0px 11px;
+  font-size: 16px;
+  line-height: 1.75;
+  background:#008BDB;
+  color: #FFF;
+  border: 1px solid #0EBEFF;
+  -ms-word-break: normal;
+  word-break: normal;
+  transition: background 0.2s ease 0s, border-color 0.2s ease 0s;
+}
+#udt_header_settings select option:hover {
+  color: #FFF;
+}
+#udt_header_settings select option:disabled {
+  color: #CCC;
+  box-shadow: none;
+  font-weight: normal;
+  cursor: default !important;
+  pointer-events: none;
+}
+/*------------------------------------*\
+  * 7. $JQUERY UI
+  * @example http://stackoverflow.com/questions/8849684/wordpress-jquery-ui-css-files
+\*------------------------------------*/
+.ui-button.ui-dialog-titlebar-close{
+  color: #FFF;
+}
+.ui-dialog-titlebar {
+  background: #1B538C !important;
+}
+.ui-slider-horizontal .ui-slider-handle {
+  top: -.3em;
+  margin-left: -.6em;
+}
+.ui-slider .ui-slider-handle {
+  position: absolute;
+  z-index: 2;
+  width: 1.2em;
+  height: 1.2em;
+  cursor: default;
+  -ms-touch-action: none;
+  touch-action: none;
+}
+.ui-corner-all,
+.ui-corner-bottom,
+.ui-corner-right,
+.ui-corner-br {
+  border-bottom-right-radius: 6px;
+}
+.ui-corner-all,
+.ui-corner-bottom,
+.ui-corner-left,
+.ui-corner-bl {
+  border-bottom-left-radius: 6px;
+}
+.ui-corner-all,
+.ui-corner-top,
+.ui-corner-right,
+.ui-corner-tr {
+  border-top-right-radius: 6px;
+}
+.ui-corner-all,
+.ui-corner-top,
+.ui-corner-left,
+.ui-corner-tl {
+  border-top-left-radius: 6px;
+}
+.ui-widget-content {
+  border: 1px solid #E7E7E7;
+  background: #CCC;
+  color: #FFF;
+}
+.ui-widget {
+  font-size: 1.1em;
+}
+.ui-slider-horizontal {
+  height: .8em;
+}
+.ui-slider {
+  position: relative;
+  text-align: left;
+}
+.wp-core-ui .button.save-button {
+  background: #090;
+  border: medium none;
+  color: #FFF;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 18px;
+  height: 45px;
+  padding: 0 15px 0 10px;
+  text-decoration: none;
+  transition: all 0.3s ease 0s;
+}
+.wp-core-ui .button.save-button:hover {
+  background: #00D100;
+}
+.wp-core-ui .button.save-button::before {
+  content: "\f148";
+  font-size: 30px;
+  float: left;
+  font-family: "dashicons";
+  line-height: 1;
+  margin-right: 10px;
+  -webkit-transform: scale(-1, 1);
+  transform: scale(-1, 1);
+}
+/*------------------------------------*\
+  * 8. $HEADER FOOTER COLOR
+  * Header and footer background color boxes
+\*------------------------------------*/
+.scheme_white,
+.scheme_blue {
+  display: inline-block;
+  border:1px solid #E7E7E7;
+  border-radius: 4px;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2) inset;
+  cursor: pointer;
+  height: 50px;
+  margin-right: 8px;
+  width: 50px;
+}
+.scheme_white {
+  background: #FFF;
+}
+.scheme_blue {
+  background: #1A9DD8;
+}
+#rad_blue_footer,
+#rad_white_footer {
+  display: none
+}
+#rad_blue_footer:checked + div,
+#rad_white_footer:checked + div {
+border:3px solid #00539F;
+}
+#rad_white_footer:disabled + .scheme_white,
+#rad_blue_footer:disabled + .scheme_blue {
+  background:#E7E7E7;
+  cursor: no-drop;
+}
+#main_wrap{
+  margin: 35px 50px 30px 30px;
+}
+#udt_header {
+  background: #154370;
+  border-radius: 4px 4px 0 0;
+  line-height: 0.8;
+  padding: 25px 28px;
+}
+#udt_wrap {
+  background-color: #154370;
+  border-radius: 4px 4px 0 0;
+  position: relative;
+}
+h1#icon-themes::before {
+  content: url("../img/wp-dashboard-icon-white.png");
+  float:left;
+  width:64px;
+  height: 64px;
+}
+h1#icon-themes {
+  display: inline-block;
+  line-height: 2.7;
+  color: #FFF;
+}
+#poststuff {
+  padding-top: 0
+}
+/*------------------------------------*\
+  * 9. $NEED SUPPORT?
+\*------------------------------------*/
+#udt_header_settings,
+#udt_footer_settings,
+#udt_about_settings,
+#udt_support_settings {
+  height: auto;
+  padding-bottom: 32px;
+  min-height: 360px;
+}
+.support_list {
+  display: block;
+  list-style: outside none none;
+}
+.support_list li:before {
+  content: "» ";
+  color: #CCC;
+}
+.support_list li {
+  font-size: 18px;
+  line-height: 1.5;
+  margin: 0 0 0 0.9em;
+  padding: 0;
+  text-indent: -0.9em;
+}
+.support_list li span {
+  font-size: 15px;
+}
+/*------------------------------------*\
+  * 10. $MEDIA QUERIES
+  * a. max-width: 47.938em / 782px
+  * b. -webkit-min-device-pixel-ratio:0
+\*------------------------------------*/
+
+@media only screen and (max-width:47.938em){
+  .form-table tr,
+  .form-table th {
+    padding: 16px 0 0;
+    text-align: center;
+  }
+  .submit{
+    padding-bottom: 2em
+  }
+  p.notify{
+    position:static;
+  }
+}
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  #udt_header_settings select {
+    padding-right:18px
+  }
+}
+/*------------------------------------*\
+  * 11. $MEDIA QUERIES & VIEWPORT TYPOGRAPHY
+  * @example https://zellwk.com/blog/viewport-based-typography/
+\*------------------------------------*/
+html {
+  font-size: 106.25%;
+  line-height: 1.4;
+  font-family: 'Open Sans', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #333;
+  text-rendering: optimizeLegibility;
+}
+
+@media all and (min-width:640px) {
+    html {
+        font-size: 118.75%
+    }
+}
+
+@media all and (min-width:1100px) {
+    html {
+        font-size: 131.25%
+    }
+}
+
+@media all and (min-width:1800px) {
+    html {
+        font-size: 150%
+    }
+}
+
+@media all and (min-width:2800px) {
+    html {
+        font-size: 162.5%
+    }
+}
+
+.h1,
+h1 {
+    font-size: 1.728rem;
+    line-height: 1.4;
+    margin-top: 2.1rem;
+    font-weight: 500
+}
+
+@media all and (min-width:640px) {
+    .h1,
+    h1 {
+        font-size: 2.0736rem
+    }
+}
+
+.h2,
+h2 {
+    font-size: 1.44rem;
+    line-height: 1.35;
+    margin-top: 2.1rem;
+    font-weight: 500
+}
+
+h1+.h2,
+h1+h2 {
+    margin-top: 1.4rem
+}
+
+h3,
+h4 {
+    font-size: 1.2rem;
+    line-height: 1.3
+}
+
+h3,
+h4,
+h6 {
+    font-weight: 500
+}
+
+h6 {
+    font-size: .69444rem;
+    line-height: 1.4rem;
+    margin-top: .7rem;
+    color: #aaa;
+    font-style: italic
+}
+
+h6 a {
+    color: #ff4f4f
+}
+
+/*------------------------------------------------------------------------------
+  1. $ACCESSIBILITY
+      a. Font Awesome Accessibility via CDN
+-------------------------------------------------------------------------------/
+
+/* class used for screen reader span text on hover */
+.sr-only { /* a */
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+
