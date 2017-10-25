@@ -12,10 +12,10 @@
   * @package     udtheme-brand
   * @subpackage  udtheme-brand/public/views
   * @author      Christopher Leonard - University of Delaware | IT CS&S
-  * @license     GPL-3.0
-  * @link        https://bitbucket.org/UDwebbranding/udtheme-branding-plugin
+  * @license     GPLv3
+  * @link        https://bitbucket.org/UDwebbranding/udtheme-brand
   * @copyright   Copyright (c) 2012-2017 University of Delaware
-  * @version     3.1.0
+  * @version     3.0.4
  */
   wp_reset_query();
   if( isset( $options["color-footer"] ) && $options["color-footer"] != '' ) {

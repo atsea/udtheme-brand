@@ -11,17 +11,17 @@
  * @package     udtheme-brand
  * @subpackage  udtheme-brand/include
  * @author      Christopher Leonard - University of Delaware | IT CS&S
- * @license     GPL-3.0
- * @link        https://bitbucket.org/UDwebbranding/udtheme-branding-plugin
+ * @license     GPLv3
+ * @link        https://bitbucket.org/UDwebbranding/udtheme-brand
  * @copyright   Copyright (c) 2012-2016 University of Delaware
- * @version     3.0.0
+ * @version     3.0.4
  */
 if ( ! class_exists( 'udtbp_Activation' ) ) :
   class udtbp_Activation {
   /**
    * The ID of this plugin.
    *
-   * @since    2.3.1
+   * @since    1.4.2
    * @version  1.0.0                           New name introduced.
    * @access   private
    * @var      string         $udtbp           The ID of this plugin.

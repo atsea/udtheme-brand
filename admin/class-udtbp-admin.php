@@ -15,8 +15,8 @@
   * @package     udtheme-brand
   * @subpackage  udtheme-brand/admin
   * @author      Christopher Leonard - University of Delaware | IT CS&S
-  * @license     GPL-3.0
-  * @link        https://bitbucket.org/UDwebbranding/udtheme-branding-plugin
+  * @license     GPLv3
+  * @link        https://bitbucket.org/UDwebbranding/udtheme-brand
   * @copyright   Copyright (c) 2012-2017 University of Delaware
   * @version     3.0.4
 */
@@ -60,17 +60,9 @@ if ( ! class_exists( 'udtbp_Admin' ) ) :
     *
     * @since    3.0.1
     * @access   public
-    * @var      constant         $json_theme_list[]    Defined in udtbp-defined-constants.
+    * @var      array           $json_theme_list[]    Defined in udtbp-defined-constants.
   */
   public $json_theme_list;
-  /**
-      * jQuery and jQuery UI CSS and JS enqueued components list array.
-      *
-      * @since    3.0.1
-      * @access   public
-      * @var      constant         $jquery_enqueue_check    Defined in udtbp-defined-constants.
-    */
-    public $jquery_enqueue_check;
 	/**
 	 * CLASS INITIALIZATION
    * Initiates the class and set its properties.
@@ -86,8 +78,6 @@ if ( ! class_exists( 'udtbp_Admin' ) ) :
      $this->plugin_settings_tabs['footer']  = 'Footer';
      $this->plugin_settings_tabs['about']   = 'About';
      $this->plugin_settings_tabs['support'] = 'Support';
-     // $this->json_theme_list = JSON_THEME_LIST;
-     // $this->jquery_enqueue_check = JQUERY_ENQUEUE_CHECK;
 	 }
    /**
      * ENQUEUE GOOGLE FONTS ADMIN
@@ -98,8 +88,8 @@ if ( ! class_exists( 'udtbp_Admin' ) ) :
      * @var         string      $family              Font variants.
      * @var         string      $subsets             Font subsets
      * @var         string      $poppins             Font name
-     * @param       array       $fonts               Font family array
-     * @link     https://themeshaper.com/2014/08/13/how-to-add-google-fonts-to-wordpress-themes/
+     * @param       array       $fonts []            Font family array
+     * @link     		https://themeshaper.com/2014/08/13/how-to-add-google-fonts-to-wordpress-themes/
    */
    public function udtbp_add_google_fonts() {
      $fonts     = array();
@@ -119,13 +109,13 @@ if ( ! class_exists( 'udtbp_Admin' ) ) :
     * Register and enqueue admin-specific stylesheets.
     * Register and enqueue admin-specific stylesheets for Internet Explorer.
     * Check if required plugin styles for jQuery UI are enqueued.
-    * @since       3.0.0
-    * @version     1.0.2
-    * @param       string      $screen                        Used to get the name of the screen that the current user is on.
-    * @uses        string      $is_IE                         var for IE < Edge
-    * @uses        string      $is_edge                       var for
-    * @return      bool                                       Whether the script has been registered. True on success, false on failure.
-    * @link     http://wordpress.stackexchange.com/questions/195864/most-elegant-way-to-enqueue-scripts-in-function-php-with-foreach-loop
+    * @since       	3.0.0
+    * @version     	1.0.3              Deprecated enqueue_styles_ie() function and moved related code here.
+    * @param       	string      $screen                        Used to get the name of the screen that the current user is on.
+    * @uses        	string      $is_IE                         var for IE < Edge
+    * @uses        	string      $is_edge                       var for
+    * @return      	bool                                       Whether the script has been registered. True on success, false on failure.
+    * @link     		http://wordpress.stackexchange.com/questions/195864/most-elegant-way-to-enqueue-scripts-in-function-php-with-foreach-loop
     * @link     http://wordpress.stackexchange.com/questions/145782/check-and-dequeue-if-multiple-stylesheets-exists-using-wp-style-is
    */
 	 public function enqueue_styles( $screen ) {
@@ -139,6 +129,13 @@ if ( ! class_exists( 'udtbp_Admin' ) ) :
 			wp_register_style( $this->udtbp .'-admin-styles', UDTBP_ADMIN_CSS_URL.'/udtbp-admin.css', array(), UDTBP_VERSION, 'all' );
 			wp_enqueue_style( $this->udtbp .'-admin-styles' );
       wp_enqueue_style( 'wp-jquery-ui-dialog' );
+
+      global $is_IE;
+		  global $is_edge;
+		  if( ( $is_IE ) || ( $is_edge ) ) {
+		    wp_register_style( $this->udtbp .'-admin-styles-ie', UDTBP_ADMIN_CSS_URL.'/udtbp-ie-admin.css', array(), UDTBP_VERSION, 'all' );
+		    wp_enqueue_style( $this->udtbp .'-admin-styles-ie' );
+		  }
     }
 	 } // end enqueue_styles()
 	/**
@@ -147,8 +144,8 @@ if ( ! class_exists( 'udtbp_Admin' ) ) :
    * Register and enqueue admin-specific CSS styles for Internet Explorer.
    *
    * @since       3.0.0
-   * @deprecated  3.0.4     Moved to enqueue_styles()
-   * @uses        $is_IE    var for IE < Edge
+   * @deprecated  3.0.4     	Moved to enqueue_styles()
+   * @uses        $is_IE    	var for IE < Edge
    * @uses        $is_edge    var for Edge
    * @param       string      $plugin_screen_hook_suffix
    * @param       string      $screen    Used to get the name of the screen that the current user is on.

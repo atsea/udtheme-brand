@@ -6,9 +6,9 @@
   *
   * @package     udtheme-brand
   * @author      Christopher Leonard - University of Delaware | IT CS&S
-  * @license     GPL-3.0
+  * @license     GPLv3
   * @copyright   Copyright (c) 2012-2017 University of Delaware
-  * @version     3.1.0
+  * @version     3.0.4
   *
 */
 if ( ! function_exists( 'udtbp_server_autoloader' ) ) :
@@ -17,6 +17,7 @@ if ( ! function_exists( 'udtbp_server_autoloader' ) ) :
    *
    * @since     1.4.2
    * @version   1.0.1
+   * @todo      												Finish translation functionality
    * @param     string    $class_name   Name of the class to load.
    */
   function udtbp_server_autoloader( $class_name ) {

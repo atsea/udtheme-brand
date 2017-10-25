@@ -1,14 +1,13 @@
 <?php
 /**
   * Plugin Name:       UDTheme Branding
-  * Plugin URI:        https://bitbucket.org/UDwebbranding/udtheme-branding-plugin
+  * Plugin URI:        https://bitbucket.org/UDwebbranding/udtheme-brand
   * Description:       Displays University of Delaware branded header and footer within WordPress themes.
   *                    For official University of Delaware department sites in accordance with CPA guidelines.
-  * Version:           3.0.5
+  * Version:           3.0.4
   * Author:            Christopher Leonard - University of Delaware | IT CS&S
-  * Author URI:        https://www.udel.edu/chris
-  * License:           GPL-3.0
-  * License URI:       https://bitbucket.org/UDwebbranding/udtheme-branding-plugin/license.txt
+  * Author URI:        https://sites.udel.edu/cleonard
+  * License:           GPLv3
   * Text Domain:       udtheme-brand
   * Domain Path:       /languages
 */

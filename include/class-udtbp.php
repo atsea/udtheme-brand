@@ -15,8 +15,8 @@
   * @package     udtheme-brand
   * @subpackage  udtheme-brand/include
   * @author      Christopher Leonard - University of Delaware | IT CS&S
-  * @license     GPL-3.0
-  * @link        https://bitbucket.org/UDwebbranding/udtheme-branding-plugin
+  * @license     GPLv3
+  * @link        https://bitbucket.org/UDwebbranding/udtheme-brand
   * @copyright   Copyright (c) 2012-2017 University of Delaware
   * @version     3.0.0
   *

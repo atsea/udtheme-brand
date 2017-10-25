@@ -11,9 +11,9 @@
   *
   * @package     udtheme-brand
   * @author      Christopher Leonard
-  * @license     GPLv3 or Later
+  * @license     GPLv3
   * @copyright   Copyright (c)2012-2017 Christopher Leonard University of Delaware
-  * @version     3.1.0   Updated version numbers of plugin and PHP
+  * @version     3.0.4   Updated version numbers of plugin and PHP
 */
 /**
   * Defines named constants that return the complete
@@ -36,11 +36,11 @@
   * Plugin CONSTANTS
 */
 const UDTBP_NAME             = 'UDTheme Branding';
-const UDTBP_VERSION          = '3.1.0';
+const UDTBP_VERSION          = '3.0.4';
 const UDTBP_REQ_PHP_VERSION  = '5.6.30';
 const UDTBP_REQ_WP_VERSION   = '4.3';
 
-$json_theme_list = array( "Aaron", "Anjirai", "Boardwalk", "Cubic", "Divi", "Highwind", "Matheson", "Radiate", "Star", "Swell Lite", "Temptation", "Tracks", "Twenty Twelve", "Twenty Fourteen", "Twenty Fifteen", "Twenty Sixteen", "Twenty Seventeen" );
+$json_theme_list = array( "Aaron", "Anjirai", "Boardwalk", "Cubic", "Divi (with fixed navigation)", "Highwind (deprecated)", "Matheson", "Radiate", "Star", "Swell Lite", "Temptation", "Tracks", "Twenty Twelve", "Twenty Fourteen", "Twenty Fifteen", "Twenty Sixteen", "Twenty Seventeen" );
 
 if ( !defined( 'JSON_THEME_LIST' ) )              define( 'JSON_THEME_LIST',     json_encode( $json_theme_list ) );
 

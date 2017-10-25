@@ -9,7 +9,7 @@
   * @package     udtheme-brand
   * @subpackage  udtheme-brand/admin
   * @author      Christopher Leonard - University of Delaware | IT CS&S
-  * @license     GPL-3.0
+  * @license     GPLv3
   * @link        https://bitbucket.org/UDwebbranding/udtheme-branding-pluign
   * @copyright   Copyright (c) 2012-2017 University of Delaware
   * @version     3.0.4
