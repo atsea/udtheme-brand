@@ -1,0 +1,192 @@
+/*------------------------------------*\
+  * $PUBLIC FOOTER CSS
+  *
+  * Defines all of the styles used for
+  * UD branded footer.
+  *
+  * @since   1.0.0
+  * @version 3.0.4
+  * @return  mixed     Doesn't load if footer is disabled
+  *
+  * 1. $LAYOUT
+  * 2. $IE HACKS
+  * 3. $MEDIA QUERIES
+\*------------------------------------*/
+/*------------------------------------*\
+  * 1. $LAYOUT
+\*------------------------------------*/
+.udgrid {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.udgrid--full > .udgrid-cell {
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 100%;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+}
+.udgrid-cell {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+}
+.ud_circle_logo {
+  padding-left:13px;
+}
+.ud_ft_social {
+  padding-right: 13px;
+}
+#udtbp_footer {
+ border-top: 3px solid #FFD300;
+ padding: .875em 0 0;
+ margin-top:1.4em;
+}
+#udtbp_footer ul {
+  list-style: none;
+  list-style-image: none;
+  text-align: right;
+}
+#udtbp_ftlogo > a {
+  padding-right:0;
+  position: relative;
+  top: -33px;
+  z-index: 1;
+}
+#udtbp_ftlogo > a,
+#udtbp_ftlogo > a:hover {
+    border: medium none;
+    display: block;
+    max-width: 370px;
+}
+#udtbp_ftlogo img {
+  margin: 0 !important;
+}
+#udtbp_footer_legal {
+  background: #EEE;
+  display: flex;
+  height: 32px;
+  width: 100%;
+}
+
+#udtbp_footer_legal > ul {
+  margin: 0 auto;
+}
+#udtbp_footer_legal li {
+  font-family: 'Arial', sans-serif;
+  font-weight: 400;
+  font-size:10px !important;
+  display: inline-block;
+  list-style: none inside none !important;
+  padding:.5em .625em .625em 0;
+  line-height: 2
+}
+#udtbp_footer_legal li:first-child {
+  color:#000
+}
+#udtbp_footer_legal a {
+  border-bottom: none;
+  text-decoration: underline;
+  color:#2F6FA7
+}
+#udtbp_sociallinks{
+  margin-top: .813em;
+}
+#udtbp_sociallinks ul {
+  padding: 0;
+  margin: 0;
+}
+#udtbp_sociallinks li {
+  display: inline-block;
+  width: 44px;
+  height: 44px;
+
+}
+#udtbp_sociallinks a {
+  display: block;
+  text-decoration: none;
+  border-bottom: none;
+}
+span[data-icon="twitter"]:after,
+span[data-icon="facebook"]:after,
+span[data-icon="instagram"]:after,
+span[data-icon="youtube"]:after,
+span[data-icon="pintrest"]:after,
+span[data-icon="linkedin"]:after{
+  display:block;
+  content:'';
+  background-color:transparent;
+  width: 44px;
+  height: 44px;
+  -webkit-background-size: 75% auto !important;
+  background-size: 75% auto !important;
+  margin:0 auto;
+}
+span[data-icon="twitter"]:after {
+  background-position: center 6px !important;
+}
+span[data-icon="facebook"]:after {
+  background-position: center -26px !important;
+}
+span[data-icon="instagram"]:after {
+  background-position: center -59px !important;
+}
+span[data-icon="youtube"]:after {
+  background-position: center -93px !important;
+}
+span[data-icon="pintrest"]:after {
+  background-position: center -126px !important;
+}
+span[data-icon="linkedin"]:after {
+  background-position: center -159px !important;
+}
+/*------------------------------------*\
+  * 2. $IE HACKS
+  * a. max-width: 63.500em / 1016px
+  * b. max-width: 48.875em / 782px
+\*------------------------------------*/
+
+
+/*------------------------------------*\
+  * 3. $MEDIA QUERIES
+  * a. min-width: 48em / 768px
+  * b. max-width: 47.938em / 767px
+\*------------------------------------*/
+@media only screen and (max-width:47.938em){ /* b */
+  #udtbp_sociallinks ul {
+    text-align: center;
+  }
+  .ud_circle_logo {
+    padding-left:0;
+    max-height:115px;
+  }
+  #udtbp_footer .ud_circle_logo,
+  #udtbp_footer .ud_ft_social {
+
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 100%;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+  }
+  .ud_ft_social {
+    padding-right: 0;
+  }
+}
+@media only screen and (min-width:48.000em){ /* a */
+  .large-udgrid--fit > .udgrid-cell,
+  #udtbp_footer .ud_circle_logo,
+  #udtbp_footer .ud_ft_social {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+  }
+}

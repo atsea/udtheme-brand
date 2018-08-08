@@ -1,0 +1,130 @@
+/*------------------------------------*\
+  * $PUBLIC HEADER CSS
+  *
+  * Defines all of the styles used for
+  * UD branded header.
+  *
+  * @since   1.4.2
+  * @version 3.0.4                  Completely re-written to latest CSS standards. Removed outdated styles.
+  * @return  mixed                  Doesn't load if footer is disabled
+  *
+  * 1. $LAYOUT
+  * 2. $MEDIA QUERIES
+\*------------------------------------*/
+/*------------------------------------*\
+  * 1. $LAYOUT
+  *   a. safari fix for font weight
+  *   @example https://stackoverflow.com/questions/21278020/font-weight-turns-lighter-on-mac-safari
+  *   ((logo h / logo w) * 100) - 2%
+\*------------------------------------*/
+#udtbp_header span {
+  display: block;
+  margin: 10px 0
+}
+#udtbp_header {
+  background-color: #0048A5;
+  background-image: url("../img/logos/ud-seal-cpa.png");
+  background-position: center 0;
+  background-repeat: no-repeat;
+/*  -webkit-background-size: contain;
+  background-size: contain;*/
+  margin: 0;
+  padding: 0;
+  overflow: visible;
+  border-bottom: 3px solid #FFD300;
+  -webkit-transition: height 0.3s ease-in 0s;
+  transition: height 0.3s ease-in 0s;
+}
+#udtbp_logo a:hover {
+  text-decoration: none
+}
+#udtbp_header > div {
+  text-align: center;
+}
+#udtbp_header span a {
+  font-family: "Open Sans",sans-serif;
+  font-weight: 400;
+  -webkit-font-smoothing: subpixel-antialiased; /* a  */
+  -webkit-text-stroke:1px transparent;
+  padding-bottom: 0;
+  color: #FFF;
+  text-decoration: none;
+  border-bottom: none;
+}
+#udtbp_logo {
+  display: flex;
+  font-size:.1rem;
+  color:#FFF;
+  overflow:visible;
+  border-bottom:none;
+  justify-content: center;
+  margin: 10px 0
+}
+.et-fixed-header {
+  max-height: 120px !important;
+  padding: 10px 0 0 !important
+}
+.et_non_fixed_nav.et_transparent_nav #main-header,
+.et_non_fixed_nav.et_transparent_nav #top-header {
+  position: relative !important;
+}
+/*------------------------------------*\
+  * 2. $MEDIA QUERIES
+  *    a. min-width: 61.250em / 980px
+  *    b. min-width: 20.000em / 320px
+  *       max-width: 61.188em / 979px
+  *    c. min-width: 48.938em / 734px
+  *       max-width: 61.188em / 979px
+  *    d. min-width: 48.938em / 734px
+  *    e. min-width: 61.250em / 980px
+\*------------------------------------*/
+@media only screen and (min-width: 61.250em) {
+  #udtbp_logo img {
+    border: 0 none;
+    padding: 0;
+    background: none;
+    color: #111;
+    width:218px;
+    height:91px;
+    -webkit-transition: width 0.3s ease 0s, height 0.3s ease 0s, transform 0.3s ease 0s;
+    transition: width 0.3s ease 0s, height 0.3s ease 0s, transform 0.3s ease 0s;
+  }
+}
+@media only screen and (min-width: 20em) and (max-width: 61.188em) {
+  #udtbp_header,
+  #udtbp_header > div {
+    height: auto;
+  }
+  #udtbp_logo img {
+    display:inline-flex;
+    margin:0 auto;
+    width: 155px;
+    height:64.7px;
+    -webkit-transition: width 0.3s ease 0s, height 0.3s ease 0s, transform 0.3s ease 0s;
+    transition: width 0.3s ease 0s, height 0.3s ease 0s, transform 0.3s ease 0s;
+  }
+}
+@media only screen and (min-width: 48.938em) and (max-width: 61.188em) {
+  #udtbp_header {
+    -webkit-background-size: 65% auto;
+    background-size: 65% auto;
+  }
+}
+@media only screen and (max-width: 767px) {
+  #udtbp_header {
+    -webkit-background-size: 100% auto;
+    background-size: 100% auto;
+    -webkit-transition: background-size 0.3s ease-in 0s;
+    transition: background-size 0.3s ease-in 0s;
+  }
+}
+@media screen and (min-width: 48.938em) {
+  #udtbp_header span a {
+    font-size: 2vw;
+  }
+}
+@media screen and (min-width: 61.250em) {
+  #udtbp_header span a {
+    font-size: 1.25em;
+  }
+}

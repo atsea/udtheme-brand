@@ -1,0 +1,19 @@
+/**
+  * $ADMIN CSS
+  *
+  * Defines all of the styles used in
+  * the plugin's ADMIN dashboard.
+  *
+  * @since   1.4.2
+  * @version 1.0.0          Removed all deprecated element styles and IE version support prior to IE Edge.
+*/
+#udt_header_settings select {
+  background:#3399FF;
+}
+#udt_header_settings label::after {
+  top: 10px;
+}
+/* IE11 hide native button (thanks Matt!) */
+select::-ms-expand {
+  display: none;
+}

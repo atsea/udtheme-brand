@@ -1,0 +1,100 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: UDTheme Branding Plugin v3.0.0\n"
+"POT-Creation-Date: 2017-01-30 15:10-0500\n"
+"PO-Revision-Date: 2017-01-30 15:54-0500\n"
+"Last-Translator: \n"
+"Language-Team: Christopher Leonard <cleonard@udel.edu>\n"
+"Language: English\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.7\n"
+"X-Poedit-KeywordsList: _;gettext;gettext_noop;__;_e;esc_attr_e;esc_html_e\n"
+"X-Poedit-Basepath: ../\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: admin/class-udtbp-admin-notices.php:111
+msgid "Dismiss this notice."
+msgstr ""
+
+#: admin/class-udtbp-admin-notices.php:147
+msgid ""
+" has fixed navigation enabled. To ensure full compatibility with the UDTheme "
+"Branding Plugin, this setting MUST be disabled in your Theme Options."
+msgstr ""
+
+#: admin/class-udtbp-admin-notices.php:156
+msgid ""
+" is not fully compatible with the UDTheme Branding Plugin and may display "
+"incorrectly."
+msgstr ""
+
+#: admin/class-udtbp-admin.php:245
+msgid "UDTheme Branding Settings"
+msgstr ""
+
+#: admin/class-udtbp-admin.php:246
+msgid "UDTheme Branding"
+msgstr ""
+
+#: admin/class-udtbp-admin.php:320
+msgid "Settings"
+msgstr ""
+
+#: admin/class-udtbp-admin.php:321
+msgid "Support"
+msgstr ""
+
+#: admin/class-udtbp-footer-settings.php:38
+msgid "Footer"
+msgstr ""
+
+#: admin/class-udtbp-footer-settings.php:94
+#: admin/class-udtbp-header-settings.php:92
+msgid "Visibility"
+msgstr ""
+
+#: admin/class-udtbp-footer-settings.php:115
+msgid "Color"
+msgstr ""
+
+#: admin/class-udtbp-footer-settings.php:132
+msgid "Configure footer options"
+msgstr ""
+
+#: admin/class-udtbp-footer-settings.php:133
+msgid "Display branded footer in blue or white."
+msgstr ""
+
+#: admin/class-udtbp-footer-settings.php:157
+#: admin/class-udtbp-header-settings.php:153
+msgid "Enable"
+msgstr ""
+
+#: admin/class-udtbp-footer-settings.php:159
+#: admin/class-udtbp-header-settings.php:155
+msgid "Disable"
+msgstr ""
+
+#: admin/class-udtbp-footer-settings.php:203
+msgid ""
+"Choose blue for light background pages or white for dark background pages."
+msgstr ""
+
+#: admin/class-udtbp-header-settings.php:37
+msgid "Header"
+msgstr ""
+
+#: admin/class-udtbp-header-settings.php:113
+msgid "Primary Logo"
+msgstr ""
+
+#: admin/class-udtbp-header-settings.php:197
+msgid "Choose one..."
+msgstr ""
+
+#: admin/class-udtbp-header-settings.php:208
+msgid "Displays UD logo with college title or UD logo only."
+msgstr ""

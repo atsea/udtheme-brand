@@ -1,0 +1,218 @@
+/**
+  * $NORMALIZE CSS
+  *
+  * Defines all of the basic reset styles used in the plugin's PUBLIC facing pages.
+  * Based off the normalize.css standard by Nicolas Gallagher and Johnathan Neal
+  *
+  * @since          1.4.2
+  * @version        1.0.0          Completely re-written to latest CSS standards. Removed outdated styles.
+  * @link                          https://github.com/necolas/normalize.css
+  * @license                       MIT License
+  *
+  * 1. $BASE
+  * 2. $LINKS
+  * 3. $TYPOGRAPHY
+  * 4. $CLASSES
+  * 5. $FLEXBOX
+  * 6. $IMAGES
+  * 7. $MISC
+  * 8. $MEDIA QUERIES
+\*------------------------------------*/
+/*------------------------------------*\
+  * 1. $BASE
+    * a. Correct the line height in all browsers.
+\*------------------------------------*/
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+html{
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering:auto;
+  -webkit-text-size-adjust:100%;
+  -ms-text-size-adjust:100%;
+  line-height: 1.15; /* a */
+}
+body {
+  position:relative;
+  padding: 0 !important;
+  border: 0 none !important
+}
+/*------------------------------------*\
+  * 2. $LINKS
+    * a. Remove the gray background on active links in IE 10.
+    * b. Remove gaps in links underline in iOS 8+ and Safari 8+.
+\*------------------------------------*/
+a {
+  background-color: transparent; /* a */
+  -webkit-text-decoration-skip: objects; /* b */
+}
+/*------------------------------------*\
+  * 3. $TYPOGRAPHY
+    * a. Add the correct font weight in Chrome, Edge, and Safari.
+\*------------------------------------*/
+b,
+strong {
+  font-weight: inherit;
+}
+b,
+strong {
+  font-weight: bolder;/* a */
+}
+/*------------------------------------*\
+  * 4. $CLASSES
+\*------------------------------------*/
+.ud_alignleft {
+  text-align:left !important
+}
+.ud_aligncenter {
+  text-align:center !important
+}
+.ud_alignright {
+  text-align:right !important
+}
+.last {
+  margin-right:0 !important
+}
+.first {
+  margin-left:0 !important
+}
+.left {
+  float:left
+}
+.right{
+  float:right
+}
+.disabled {
+  opacity: .6
+}
+.hide {
+  display: none
+}
+.block {
+  display: block
+}
+.inline_block {
+  display: inline-block
+}
+/*------------------------------------*\
+  * 5. $FLEXBOX
+\*------------------------------------*/
+.ud_grid {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0
+}
+.ud_grid--full > .ud_grid-cell {
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 100%;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%
+  }
+.ud_grid-cell {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1
+}
+
+.ud_grid--top {
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start
+}
+
+.ud_grid--bottom {
+  -webkit-box-align: end;
+  -webkit-align-items: flex-end;
+  -ms-flex-align: end;
+  align-items: flex-end
+}
+
+.ud_grid--center {
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center
+}
+
+.ud_grid--justifyCenter {
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center
+}
+
+.ud_grid-cell--top {
+  -webkit-align-self: flex-start;
+  -ms-flex-item-align: start;
+  align-self: flex-start
+}
+
+.ud_grid-cell--bottom {
+  -webkit-align-self: flex-end;
+  -ms-flex-item-align: end;
+  align-self: flex-end
+}
+
+.ud_grid-cell--center {
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center
+}
+.ud_grid--fit > .ud_grid-cell {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1
+}
+
+
+
+
+/*------------------------------------*\
+  * 6. $IMAGES
+    * a. Remove the border on images inside links in IE 10-.
+    * b. Hide the overflow in IE.
+\*------------------------------------*/
+img {
+  border-style: none; /* a */
+}
+svg:not(:root) {
+  overflow: hidden; /* b */
+}
+/*------------------------------------*\
+  * 7. $MISC
+    * a. Add the correct box sizing in Firefox.
+    * b. Show the overflow in Edge and IE.
+\*------------------------------------*/
+hr {
+  box-sizing: content-box; /* a */
+  height: 0; /* a */
+  overflow: visible; /* b */
+}
+/*------------------------------------*\
+  * 8. $MEDIA QUERIES
+    * a. -webkit-min-device-pixel-ratio:1.5),
+    *    (min-resolution:1.5dppx),
+    *    (min-resolution:144dpi)
+    *    Retina specific styles
+\*------------------------------------*/
+
+@media (-webkit-min-device-pixel-ratio:1.5),
+(min-resolution:1.5dppx),
+(min-resolution:144dpi) { /* c */
+  html {
+    font-weight: 300
+  }
+}
